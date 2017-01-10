@@ -5,7 +5,7 @@ var state = {
 	questions: [
 	{
 		question: "What is the big orange thing in the sky?",
-		answers: ["moon", "sun" "Donald Trump"],
+		answers: ["moon", "sun", "Donald Trump"],
 		correctAnswer: "sun",
 		questionNumber: 1
 	},
@@ -18,12 +18,11 @@ var state = {
 	}
 
 ]};
-var questionNumber = 0;
-//console.log(state);
+console.log(state.questions[0].question);
 var renderState = function(state) {
 	var element = $('.questions')
-	var itemsToRender = state.questions.[questionNumber].map(function(question){
-		return '<li>' + question + '</li>';
+	var itemsToRender = state.questions.map(function(item){
+		return '<li>' + item + '</li>';
 	});
 	element.html(itemsToRender);
 };
